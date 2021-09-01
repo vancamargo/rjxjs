@@ -1,0 +1,24 @@
+<div fxFill fxLayoutAlign="center center">
+    <button mat-button color="primary" (click)="mapClick()">Operatos</button>
+    <button mat-button color="primary" (click)="filterClick()">map</button>
+    <button mat-button color="primary" (click)="tap()">tap</button>
+    <button mat-button color="primary" (click)="takeClick()">take</button>
+
+    <button mat-button color="primary" (click)="takeWhileClick()">Take While</button>
+    <button mat-button color="primary" (click)="takeUnitSearch()">Take Unit Search</button>
+
+</div> 
+
+
+<div class="debounce-area" 
+matRippleCentered="true" matRippleColor="rgb(240,166, 166,0.4)"
+matRippleRadius="40"> 
+
+</div>
+
+<mat-divider></mat-divider>
+    <mat-form-field style="margin: 20px; ">
+        <mat-label>Search by</mat-label>
+        <input matInput placeholder="type something" autocomplete="off"
+        (keyup)="searchBy_UsingDebounce($event)" [(ngModel)]="searchInput">
+    </mat-form-field>
